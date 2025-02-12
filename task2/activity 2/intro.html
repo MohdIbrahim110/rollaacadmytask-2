@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <form id="login">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Login</button>
+                <div id="login-error" class="error-message"></div>
+                <p>Don't have an account? <span id="show-register" class="link">Register here</span></p>
+            </form>
+        </div>
+
+        <div id="register-form" class="form-container hidden">
+            <h2>Register</h2>
+            <form id="register">
+                <div>
+                    <label for="new-username">Username:</label>
+                    <input type="text" id="new-username" required>
+                </div>
+                <div>
+                    <label for="new-password">Password:</label>
+                    <input type="password" id="new-password" required>
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit">Register</button>
+                <div id="register-error" class="error-message"></div>
+                <p>Already have an account? <span id="show-login" class="link">Login here</span></p>
+            </form>
+        </div>
+
+       
+        <div id="dashboard" class="hidden">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <button id="logout">Logout</button>
+            <div>
+                <button id="create-portfolio">Create Portfolio</button>
+            </div>
+
+            <div id="portfolio-form" class="hidden">
+                <h3>Create Portfolio</h3>
+                <form id="create-portfolio-form">
+                    <div>
+                        <label for="portfolio-name">Portfolio Name:</label>
+                        <input type="text" id="portfolio-name" required>
+                    </div>
+                    <div>
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio"></textarea>
+                    </div>
+                    <div>
+                        <label for="skills">Skills (comma separated):</label>
+                        <input type="text" id="skills">
+                    </div>
+                    <div>
+                        <label for="projects">Projects (comma separated):</label>
+                        <input type="text" id="projects">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div id="portfolio-list">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
